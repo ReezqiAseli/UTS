@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  aggregator:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - aggregator_data:/app/data
+    environment:
+      - DB_PATH=/app/data/aggregator.db
+
+  publisher:
+    build: .
+    command: ["python", "-m", "publisher.main"]
+    volumes:
+      - ./publisher:/app/publisher
+    depends_on:
+      - aggregator
+
+volumes:
+  aggregator_data:
