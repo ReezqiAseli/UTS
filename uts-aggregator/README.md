@@ -17,3 +17,9 @@ Layanan aggregator berbasis Python (FastAPI + asyncio) yang dirancang untuk mena
 docker-compose up --build
 ## 2. Jika mau reset databasenya 
 docker-compose down -v
+## 3. Buka SwaggerUI
+http://localhost:8080/docs
+## 4. Cek Stats
+http://localhost:8080/stats
+## 5. Cek Data Event
+http://localhost:8080/events?topic=user_clicks
