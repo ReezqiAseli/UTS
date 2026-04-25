@@ -13,3 +13,6 @@ Untuk layanan aggregator ini, **Partial Ordering / Causal Ordering** (pengurutan
 ## 3. Asumsi Desain
 - Database SQLite dinilai cukup karena beban in memory queue dapat menangani spikes rate tinggi sebelum masuk disk secara sekuensial.
 - *At-least-once delivery* diasumsikan datang dari layanan eksternal, sehingga kerjaan *aggregator* hanya membuang duplikat seefisien mungkin tanpa menginterupsi *pipeline*.
+
+## Link Demonstrasi
+https://youtu.be/CVQJ6T--_P0?si=yuNXoY1bQEMXCa9q
