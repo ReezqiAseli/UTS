@@ -8,3 +8,12 @@ Layanan aggregator berbasis Python (FastAPI + asyncio) yang dirancang untuk mena
 - **Idempotency & Deduplication**: Mencegah pemrosesan ulang event yang sama menggunakan (Composite Primary Key) pada SQLite.
 - **Fault Tolerance**: Data tetap aman dan deduplikasi tetap berjalan setelah restart container berkat volume persistensi.
 - **Automated Simulation**: Terintegrasi dengan service publisher yang mengirimkan >5.000 event secara otomatis.
+
+
+
+## Cara Run
+
+## 1. Menggunakan Docker Compose
+docker-compose up --build
+## 2. Jika mau reset databasenya 
+docker-compose down -v
